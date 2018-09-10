@@ -38,7 +38,12 @@ public class Restaurant {
 														//놔서 관계없는것에 에러가 발생해도 전부 에러가 된다.
 
 		Restaurant r = (Restaurant) ac.getBean("rest");
-		Pizza p = (Pizza) r.getPizza();
-		p.sell();
+		/*Pizza p = (Pizza) r.getPizza();
+		p.sell();*/
+		List<Food> foodList = r.getFoods();
+		for(Food f : foodList) {
+			f.sell();
+		}
+	
 	}
 }

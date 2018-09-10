@@ -1,8 +1,10 @@
 package ict.sp.test.ch3;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 @Service("pas")
+@Order(1)
 public class Pasta implements Food{
 
 	@Override
